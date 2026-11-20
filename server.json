@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "trade.lafo/robots",
+  "title": "lafo.trade",
+  "description": "Read your lafo.trade trading robots, positions and history, and pull their brakes. No orders.",
+  "version": "1.0.1",
+  "websiteUrl": "https://lafo.trade/en/guide/assistant-ia",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.lafo.trade/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by your lafo_ key, created on lafo.trade under My AI (lafo.trade members only)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
